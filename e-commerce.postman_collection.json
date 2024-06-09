@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "b052962e-00f4-4aae-9b47-c833bb6e29c0",
+		"name": "e-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27795681"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "add catagory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Footwear\",\n    \"desc\":\"Women's, Kids and Men's Footwear\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}category",
+							"host": [
+								"{{url}}category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Mobile\",\n    \"desc\":\"abc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}category/3",
+							"host": [
+								"{{url}}category"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}category",
+							"host": [
+								"{{url}}category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seller",
+			"item": [
+				{
+					"name": "update seller",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Bajrang Sharma\",\n    \"email\":\"Bajrang@gmail.com\",\n    \"phone\":\"5695474444\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}seller/2",
+							"host": [
+								"{{url}}seller"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get seller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}seller",
+							"host": [
+								"{{url}}seller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add seller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Vijay bhatt\",\n    \"email\":\"vijay@gmail.com\",\n    \"phone\":\"8886778876\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}seller",
+							"host": [
+								"{{url}}seller"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/home/Downloads/products/shoes/s10.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Mens Breathable Black Sneakers Running Shoes Fitness Sports Casual Shoes Running Shoes For Men  (Black)",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "NA",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "399",
+									"type": "text"
+								},
+								{
+									"key": "quantity_in_stock",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "seller_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "category_name",
+									"value": "Footwear",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}product",
+							"host": [
+								"{{url}}product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/home/Downloads/moto.jpg"
+								},
+								{
+									"key": "name",
+									"value": "MOTOROLA e32 (Arctic Blue, 64 GB)  (4 GB RAM)",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "The Moto E32 smartphone is designed for die-hard content consumers who enjoy streaming videos on the go and capturing detailed moments in any lighting while standing out from the crowd. It's amazing to see on the 16.51 cm (6.5) ultra-wide 90 Hz IPS LCD panel. The Moto E32 is made of premium materials and has a thin, water-resistant design with a premium appearance and feel. Great photos and movies can be captured both during the day and at night thanks to the adaptable 50 MP camera system with Quad Pixel technology.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "7999",
+									"type": "text"
+								},
+								{
+									"key": "quantity_in_stock",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "category_name",
+									"value": "Mobile",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}product/7",
+							"host": [
+								"{{url}}product"
+							],
+							"path": [
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}product/5",
+							"host": [
+								"{{url}}product"
+							],
+							"path": [
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}product",
+							"host": [
+								"{{url}}product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}product/1",
+							"host": [
+								"{{url}}product"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products by categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}product/category/Books",
+							"host": [
+								"{{url}}product"
+							],
+							"path": [
+								"category",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Signin & Signup",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"john doe\",\n    \"email\":\"john@gmail.com\",\n    \"phone\":\"7867648892\",\n    \"password\":\"john123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ch@gmail.com\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add product to cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":8,\n    \"quantity\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}cart/add",
+							"host": [
+								"{{url}}cart"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch cart products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}cart/get",
+							"host": [
+								"{{url}}cart"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product quantity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\":1,\n    \"qty\":3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}cart/update",
+							"host": [
+								"{{url}}cart"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}cart/delete/7",
+							"host": [
+								"{{url}}cart"
+							],
+							"path": [
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": {\n        \"address1\": \"near bethal park\",\n        \"city\": \"Nadiad\",\n        \"state\": \"Gujarat\",\n        \"country\": \"India\",\n        \"pincode\": 248584\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}order/create",
+							"host": [
+								"{{url}}order"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}order/get",
+							"host": [
+								"{{url}}order"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsImlhdCI6MTY4NjEyNzgyNH0.URd4NdDLBRQKXWwkpkIWrmOjMf5QAZGahlTf8B_fqrY 1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}order/items/4",
+							"host": [
+								"{{url}}order"
+							],
+							"path": [
+								"items",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"pending\",\n    \"orderID\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}order/update",
+							"host": [
+								"{{url}}order"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
